@@ -1,5 +1,6 @@
 # 版本发布库
 ## 运行
-`git clone `
+`git clone git@github.com:QuantumInnovators/MetaModel.git`
+
 `./run-qemu.sh test` 
 
