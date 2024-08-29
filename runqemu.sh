@@ -62,4 +62,4 @@ esac
 set -xe
 
 qemu-img resize -f raw $IMG 1G
-$QEMU -echr $QEMU_ESC_CHAR -M raspi3b -m 1G -kernel $KERNEL -dtb $DTB -append "$KERNEL_CMD_LINE" -drive file=$IMG,if=sd,format=raw -device usb-net,netdev=usbnet0 -netdev user,id=usbnet0,hostfwd=tcp::10022-:22,hostfwd=tcp::9000-:9000 -device max1111 -nographic
+$QEMU -echr $QEMU_ESC_CHAR -M raspi3b -m 1G -kernel $KERNEL -dtb $DTB -append "$KERNEL_CMD_LINE" -drive file=$IMG,if=sd,format=raw -device usb-net,netdev=usbnet0 -netdev user,id=usbnet0,hostfwd=tcp::52022-:22,hostfwd=tcp::8888-:8888 -device ad7606,id=spi0 -nographic
